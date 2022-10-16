@@ -1,9 +1,7 @@
+from flask import render_template
 from app import app
+from models.todo_list import tasks
 
-@app.route('/')
+@app.route('/tasks')
 def index():
-    return "Hello friends!!"
-
-@app.route('/<name>')
-def greet(name):
-    return f"Hello {name}!"
+    return render_template('index.html', title='Home', tasks=tasks)
