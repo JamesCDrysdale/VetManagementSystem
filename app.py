@@ -1,6 +1,5 @@
 from flask import Flask
 
-
 # Create application object as an instance of class Flask
 app = Flask(__name__)
 
