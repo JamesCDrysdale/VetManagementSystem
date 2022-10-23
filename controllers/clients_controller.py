@@ -69,3 +69,9 @@ def update_client(id):
 ################
 ###  DELETE  ###
 ################
+
+# DELETE A TASK
+@clients_blueprint.route("/clients/<id>/delete", methods=['POST'])
+def delete_client(id):
+    client_repository.delete(id)
+    return redirect('/clients')

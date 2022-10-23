@@ -2,10 +2,23 @@
 {% block content %}
 
 <div class="client-card">
-    <p><strong>Name: </strong>{{ client.first_name }} {{ client.last_name }}</p>
-    <p><strong>Email: </strong>{{ client.email }}</p>
-    <p><strong>Phone: </strong>{{ client.phone }}</p>
-    <p><a href="/clients/{{client.id}}/edit">Edit</a> </p>
+    <div>
+        <ul class="main-nav secondary-nav">
+            <li class="nav">
+                <a class="plain-link" href="/clients/{{client.id}}/edit">Edit Details</a>
+            </li>
+            <li class="nav warning">
+                <form class="nudge" action="/clients/{{client.id}}/delete" method="POST">
+                    <button class="trash-button">DELETE Client</button>
+                </form>
+            </li>
+        </ul>   
+    </div>
+    <div>
+        <p><strong>Name: </strong>{{ client.first_name }} {{ client.last_name }}</p>
+        <p><strong>Email: </strong>{{ client.email }}</p>
+        <p><strong>Phone: </strong>{{ client.phone }}</p>
+    </div>
 </div>
 
 {% endblock %}
