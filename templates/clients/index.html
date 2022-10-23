@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for client in all_clients %}
+  <div class="client-card">
+    <p><strong>Name: </strong>{{ client.first_name }} {{ client.last_name }}</p>
+  </div>
+{% endfor %}
+
+{% endblock %}
