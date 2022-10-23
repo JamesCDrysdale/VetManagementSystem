@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div>
+  <ul class="main-nav secondary-nav">
+    <li class="nav"><a class="plain-link" href="/clients/new">New Client</a></li>
+  </ul>
+  
+</div>
+
 {% for client in all_clients %}
   <div class="client-card">
     <a class="plain-link" href="/clients/{{client.id}}">

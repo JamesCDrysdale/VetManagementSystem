@@ -5,6 +5,7 @@
     <p><strong>Name: </strong>{{ client.first_name }} {{ client.last_name }}</p>
     <p><strong>Email: </strong>{{ client.email }}</p>
     <p><strong>Phone: </strong>{{ client.phone }}</p>
+    <p><a href="/clients/{{client.id}}/edit">Edit</a> </p>
 </div>
 
 {% endblock %}

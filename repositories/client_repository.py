@@ -3,8 +3,8 @@ from db.run_sql import run_sql
 from models.client import Client
 
 def save(client):
-    sql = "INSERT INTO clients (first_name, last_name, phone, email) VALUES (%s, %s, %s, %s) RETURNING *"
-    values = [client.first_name, client.last_name, client.phone, client.email]
+    sql = "INSERT INTO clients (first_name, last_name, email, phone) VALUES (%s, %s, %s, %s) RETURNING *"
+    values = [client.first_name, client.last_name, client.email, client.phone]
     results = run_sql(sql, values)
     id = results[0]['id']
     client.id = id
@@ -18,7 +18,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        client = Client(row['first_name'], row['last_name'], row['phone'], row['email'], row['id'] )
+        client = Client(row['first_name'], row['last_name'], row['email'], row['phone'], row['id'] )
         clients.append(client)
     return clients
 
@@ -29,5 +29,5 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        client = Client(result['first_name'], result['last_name'], result['phone'], result['email'], result['id'] )
+        client = Client(result['first_name'], result['last_name'], result['email'], result['phone'], result['id'] )
     return client
