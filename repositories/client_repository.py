@@ -21,3 +21,13 @@ def select_all():
         client = Client(row['first_name'], row['last_name'], row['phone'], row['email'], row['id'] )
         clients.append(client)
     return clients
+
+def select(id):
+    client = None
+    sql = "SELECT * FROM clients WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        client = Client(result['first_name'], result['last_name'], result['phone'], result['email'], result['id'] )
+    return client

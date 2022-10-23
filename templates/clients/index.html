@@ -3,7 +3,9 @@
 
 {% for client in all_clients %}
   <div class="client-card">
-    <p><strong>Name: </strong>{{ client.first_name }} {{ client.last_name }}</p>
+    <a class="plain-link" href="/clients/{{client.id}}">
+        <p><strong>Name: </strong>{{ client.first_name }} {{ client.last_name }}</p>
+    </a>
   </div>
 {% endfor %}
 

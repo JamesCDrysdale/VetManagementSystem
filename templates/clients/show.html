@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="client-card">
+    <p><strong>Name: </strong>{{ client.first_name }} {{ client.last_name }}</p>
+    <p><strong>Email: </strong>{{ client.email }}</p>
+    <p><strong>Phone: </strong>{{ client.phone }}</p>
+</div>
+
+{% endblock %}
