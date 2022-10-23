@@ -68,6 +68,21 @@ header {
 }
 
 /* ================================= 
+  Secondary Navigation
+==================================== */
+
+.secondary-nav {
+	display: flex;
+	align-items: right;
+	justify-content: right;
+}
+
+.secondary-nav li {
+	background-color: var(--primary-brand-color);
+	color: var(--primary-bg-color);
+}
+
+/* ================================= 
   Client Card Styles
 ==================================== */
 
