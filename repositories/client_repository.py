@@ -2,6 +2,7 @@ from db.run_sql import run_sql
 
 from models.client import Client
 
+# CREATE
 def save(client):
     sql = "INSERT INTO clients (first_name, last_name, email, phone) VALUES (%s, %s, %s, %s) RETURNING *"
     values = [client.first_name, client.last_name, client.email, client.phone]
@@ -10,7 +11,7 @@ def save(client):
     client.id = id
     return client
 
-
+#  READ
 def select_all():
     clients = []
 
@@ -31,3 +32,9 @@ def select(id):
     if result is not None:
         client = Client(result['first_name'], result['last_name'], result['email'], result['phone'], result['id'] )
     return client
+
+# UPDATE
+def update(client):
+    sql = "UPDATE clients SET (first_name, last_name, email, phone) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [client.first_name, client.last_name, client.email, client.phone, client.id]
+    run_sql(sql, values)
