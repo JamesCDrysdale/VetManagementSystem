@@ -16,6 +16,7 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
+	background-color: var(--secondary-brand-color);
 }
 
 main {
@@ -36,7 +37,7 @@ header {
     background-color: var(--primary-brand-color);
 } 
 
-.nav {
+.nav, button {
   list-style: none;
   font-family: 'Nunito', sans-serif;
 }
@@ -45,7 +46,7 @@ header {
 	text-decoration: none;
 }
 
-.brand-name, .main-nav a {
+.brand-name, .main-nav a, button {
     color: var(--primary-bg-color);
     font-size: .99em;
 }
@@ -56,7 +57,7 @@ header {
 }
 
 .logo a,
-.main-nav a {
+.main-nav a, button {
 	padding: 10px 15px;
 	text-transform: uppercase;
 	text-align: center;
@@ -64,7 +65,7 @@ header {
 }
 
 .main-nav a:hover {
-    background-color: var(--primary-highlight-color);
+    background-color: var(--tertiary-brand-color);
 }
 
 /* ================================= 
@@ -87,11 +88,43 @@ header {
 ==================================== */
 
 .client-card {
-	background-color: var(--secondary-brand-color);
+	background-color: #FFF;
 	padding: 1px 20px;
 	margin: 15px 0px;
-	border-radius: 25px;
 	box-shadow: 3px 3px 10px #888888;
+}
+
+.warning:hover {
+	background-color: var(--primary-highlight-color);
+}
+
+.nudge {
+	position: relative;
+	top: 9px;
+	margin: 0 10px;
+}
+
+.trash-button{
+	display: contents;
+}
+
+#trash-icon {
+	color: var(--primary-highlight-color);
+}
+
+.delete-form{
+	display: inline;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
 }
 
 /* ================================= 

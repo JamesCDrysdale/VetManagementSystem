@@ -38,3 +38,15 @@ def update(client):
     sql = "UPDATE clients SET (first_name, last_name, email, phone) = (%s, %s, %s, %s) WHERE id = %s"
     values = [client.first_name, client.last_name, client.email, client.phone, client.id]
     run_sql(sql, values)
+
+# DELETE
+
+def delete_all():
+    sql = "DELETE  FROM clients"
+    run_sql(sql)
+
+
+def delete(id):
+    sql = "DELETE  FROM clients WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
