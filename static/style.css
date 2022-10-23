@@ -10,7 +10,6 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -22,9 +21,12 @@ body {
 main {
     margin: 20px;
     color: var(--primary-brand-color);
+	font-family: 'Open Sans', sans-serif;
 }
 
-/* HEADER STYLES */
+/* ================================= 
+  Header Styles
+==================================== */
 
 .brand-name {
     font-family: 'Patua One', cursive;
@@ -34,10 +36,9 @@ header {
     background-color: var(--primary-brand-color);
 } 
 
-.main-nav {
-  margin: 0;
-  padding: 0;
+.nav {
   list-style: none;
+  font-family: 'Nunito', sans-serif;
 }
 
 .brand-name, .main-nav a {
@@ -63,6 +64,16 @@ header {
     background-color: var(--primary-highlight-color);
 }
 
+/* ================================= 
+  Client Card Styles
+==================================== */
+
+.client-card {
+	background-color: var(--secondary-brand-color);
+	padding: 1px 20px;
+	margin: 15px 0px;
+	border-radius: 25px;
+}
 
 /* ================================= 
   Media Queries
