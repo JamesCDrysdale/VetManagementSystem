@@ -1,7 +1,7 @@
 from flask import render_template
 from app import app
-from models.todo_list import tasks
 
-@app.route('/tasks')
+
+@app.route('/')
 def index():
-    return render_template('index.html', title='Home', tasks=tasks)
+    return render_template('index.html', title='NeoVet Pro')

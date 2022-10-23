@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Patua+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>{{ title }} </title>
+</head>
+<body>
+    <!-- <header class="nav-wrapper">
+        <div class="nav-left">
+            <h1 class="brand-name">{{ title }}</h1>     
+        </div>
+       <nav class="nav-right">
+            <ul>
+                <li><a>Dashboard</a></li>
+                <li><a>Client List</a></li>
+            </ul>
+       </nav>
+    </header> -->
+
+    <header class="header">
+		<h1 class="logo"><a class="brand-name" href="#">{{ title }}</a>      </h1>
+    
+        <ul class="main-nav">
+            <li class="nav-dashboard"><a href="#">Dashboard</a></li>
+            <li class="minor-nav"><a href="#">Client List</a></li>
+        </ul>
+	</header> 
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
